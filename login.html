@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/login.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="sign_in">
+        <div class="image">
+            <img src="/assets/imgs/ipad.png" alt="">
+        </div>
+        <div class="hero">
+            <div class="form">
+                <div class="button_box">
+                    <div id="btn"></div>
+                    <button class="toggle-btn" onclick="login(this)">Log In</button>
+                    <button class="toggle-btn" onclick="register(this)">Register</button>
+                </div>
+
+                <form id="login" class="input-group">
+                    <div class="email1">
+                        <div class="email">
+                            <div class="text">
+                                <input type="email" class="input-field" placeholder="Email" required>
+                            </div>
+                            <div class="email_icon">
+                                <img src="/assets/imgs/Mail.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pasword1">
+                        <div class="pasword">
+                            <div class="text">
+                                <input type="password" class="pass_input input-field" placeholder="Password" required>
+                            </div>
+                            <div class="pasword_icon">
+                                <img src="/assets/imgs/password.png" alt="">
+                            </div>
+                            <div class="eye_icon">
+                                <img class="d1" src="/assets/imgs/eye.svg" alt="">
+                                <img class="d2" src="/assets/imgs/eyeslash.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <label>
+                        <input type="checkbox" class="check-box" />
+                        <span>Remember Password</span>
+                    </label>
+                    <button type="submit" class="sumbit-btn">Log In</button>
+                    <!-- <div class="social_media1">
+                        <img src="/assets/imgs/Googlelogin.png" alt="">
+                        <img src="/assets/imgs/Fblogin.png" alt="">
+                        <img src="/assets/imgs/twiterlogin.png" alt="">
+                    </div> -->
+                </form>
+                <form id="register" class="input-group">
+                    <div class="name">
+                        <div class="user">
+                            <div class="text">
+                                <input type="text" class="input-field" placeholder="Full Name" required>
+                            </div>
+                            <div class="user_icon">
+                                <img src="/assets/imgs/User.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mail1">
+                        <div class="mail">
+                            <div class="text">
+                                <input type="email" class="input-field" placeholder="Email" required>
+                            </div>
+                            <div class="email_icon">
+                                <img src="/assets/imgs/Mail.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="password1">
+                        <div class="password">
+                            <div class="text">
+                                <input type="password" id="register_input_pass" class="pass_input input-field"
+                                    placeholder="Password" required>
+                            </div>
+                            <div class="password_icon">
+                                <img src="/assets/imgs/password.png" alt="">
+                            </div>
+                            <div id="regsiter_eye" class="eye_icon">
+                                <img class="i1" src="/assets/imgs/eye.svg" alt="">
+                                <img class="i2" src="/assets/imgs/eyeslash.svg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="confirm1">
+                        <div class="confirm">
+                            <div class="text">
+                                <input type="password" class=" input-field " placeholder="Confirm" required>
+                            </div>
+                            <div class="confirm_icon">
+                                <img src="/assets/imgs/password.png" alt="">
+                            </div>
+
+                        </div>
+                        <div class="remember_me">
+                            <label>
+                                <input type="checkbox" class="check-box" />
+                                <span>By creating account, you agree with Terms and Conditions & Privacy Policy</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="sumbit-btn">Create account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div>
+    </div>
+    <script>
+        // let x = document.getElementById("login");
+        // let y = document.getElementById("register");
+        // let z = document.getElementById("btn");
+
+        const btns = document.querySelectorAll('.toggle-btn');
+        btns[0].style.color = 'white'
+        //       login = document.querySelector('#login'),
+        //       register = document.querySelector('#register');
+
+        // btns[0].addEventListener('click', (e) => {
+        //     // e.target.classList.add('active')
+        //     login.classList.add('active');
+        //     register.classList.remove('active');
+        // })      
+        // btns[1].addEventListener('click', () => {
+        //     login.classList.remove('active');
+        //     register.classList.add('active');
+        // })
+
+        var x = document.getElementById("login");
+        var y = document.getElementById("register");
+        var z = document.getElementById("btn");
+
+
+        function register(e) {
+
+            btns.forEach(item => item.style.color = 'unset')
+
+
+            e.style.color = 'white'
+
+
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+        function login(e) {
+            btns.forEach(item => item.style.color = 'unset')
+
+
+            e.style.color = 'white'
+
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0px";
+        }
+
+
+        let password = document.querySelector(".pass_input");
+        let eye = document.querySelector(".eye_icon");
+        let d1 = document.querySelector(".d1");
+        let d2 = document.querySelector(".d2");
+        let i1 = document.querySelector(".i1");
+        let i2 = document.querySelector(".i2");
+        register_eye = document.getElementById("regsiter_eye");
+        register_pass = document.getElementById("register_input_pass")
+        eye.addEventListener('click', () => {
+            // input type check
+            password.type = (password.type === "password") ? "text" : "password";
+            // Icon show/unsow
+            d1.style = (password.type === "password") ? "display:none" : "display:block";
+            d2.style = (password.type === "text") ? "display:none" : "display:block";
+
+            // if (password.type === "password") {
+            //     d1.style = "display: none"
+            //     d2.style = "display: block"
+            // }
+            // else if (password.type === "text") {
+            //     d1.style = "display: block"
+            //     d2.style = "display: none"
+            // }
+            // if(password.type === "password"){
+            //     password.type = "text"
+            // }
+            // else if(password.type === "text"){
+            //     password.type = "paswword"
+            // }
+        })
+        register_eye.addEventListener('click', () => {
+            // input type check
+            register_pass.type = (register_pass.type === "password") ? "text" : "password";
+            // Icon show/unsow
+            i1.style = (register_pass.type === "password") ? "display:none" : "display:block";
+            i2.style = (register_pass.type === "text") ? "display:none" : "display:block";
+
+            // if (password.type === "password") {
+            //     d1.style = "display: none"
+            //     d2.style = "display: block"
+            // }
+            // else if (password.type === "text") {
+            //     d1.style = "display: block"
+            //     d2.style = "display: none"
+            // }
+            // if(password.type === "password"){
+            //     password.type = "text"
+            // }
+            // else if(password.type === "text"){
+            //     password.type = "paswword"
+            // }
+        })
+
+
+        // let pasword = document.querySelector(".pass_input");
+        //     let eye = document.querySelector(".eye_icon");
+        //     let d1 = document.querySelector(".d1");
+        //     let d2 = document.querySelector(".d2");
+        // let pasword = document.querySelector(".pass_input");
+        // let eye_icon1 = document.querySelector(".eye_icon1");
+        // let d3 = document.querySelector(".d3");
+        // let d4 = document.querySelector(".d4");
+
+        // eye.addEventListener('click', () => {
+        //     // input type check
+        //     password.type = (password.type === "password") ? "text" : "password";
+        //         // Icon show/unsow
+        //     d1.style = (password.type === "password") ? "display:none" : "display:block";
+        //     d2.style = (password.type === "text") ? "display:none" : "display:block";
+        // })
+
+    </script>
+</body>
+
+</html>

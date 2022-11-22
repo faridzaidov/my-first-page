@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    user-select: none;
+}
+p {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin: 15px 0 3px 20px;
+    color: #1a1a1a;
+}
+.sign_in {
+    display: flex;
+    background: #f4f3ff;
+}
+.image {
+    margin: 30px 0;
+}
+.hero {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 10px;
+    margin: 0 390px;
+}
+.form {
+    width: 370px;
+    height: 555px;
+    position: relative;
+    margin: 6% auto;
+    background-color: white;
+    padding: 5px;
+    overflow: hidden;
+    border: 2px solid #D2D2D2;
+    border-radius: 15px;
+}
+.button_box {
+    width: 220px;
+    margin: 20px 70px;
+    position: absolute;
+    border-radius: 28px 0px 0px 28px;
+    border-color: #5925dc;
+}
+.toggle-btn {
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background-color: #5925dc;
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.input-group {
+    margin: 90px 0;
+    position: absolute;
+    width: 280px;
+    transition: 0.5s;
+}
+.input-field {
+    position: relative;
+    width: 70%;
+    padding: 10px 0 10px 10px;
+    margin: 10px 0;
+    background-color: #EDEDED;
+    border: none;
+    font-size: 16px;
+    color: black;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    outline: none;
+}
+.email {
+    position: relative;
+    height: 51px;
+    background-color: #EDEDED;
+    border: 1px solid none;
+    border-radius: 6px;
+    padding: 0 0 0 26px;
+    margin: 0 0 20px 0;
+}
+.email_icon {
+    position: absolute;
+    top: 34%;
+    left: 3%;
+}
+.pasword {
+    position: relative;
+    height: 51px;
+    background-color: #EDEDED;
+    border: 1px solid none;
+    border-radius: 6px;
+    padding: 0 0 0 26px;
+    margin: 0 0 20px 0;
+}
+.pasword_icon {
+    position: absolute;
+    top: 34%;
+    left: 3%;
+}
+.eye_icon{
+    position: absolute;
+    top: 34%;
+    right: 10px;
+}
+.d1{
+    position: absolute;
+    display: none;
+    right: 0;
+}
+.d2{
+    right: 0;
+}
+.i1{
+    position: absolute;
+    display: none;
+    right: 0;
+}
+.i2{
+    right: 0;
+}
+.user {
+    position: relative;
+    height: 51px;
+    background-color: #EDEDED;
+    border: 1px solid none;
+    border-radius: 6px;
+    padding: 0 0 0 26px;
+    margin: 0 0 20px 0;
+}
+.user_icon {
+    position: absolute;
+    top: 34%;
+    left: 3%;
+}
+.mail {
+    position: relative;
+    height: 51px;
+    background-color: #EDEDED;
+    border: 1px solid none;
+    border-radius: 6px;
+    padding: 0 0 0 26px;
+    margin: 0 0 20px 0;
+}
+.mail_icon {
+    position: absolute;
+    top: 34%;
+    left: 3%;
+}
+.password {
+    position: relative;
+    height: 51px;
+    background-color: #EDEDED;
+    border: 1px solid none;
+    border-radius: 6px;
+    padding: 0 0 0 26px;
+    margin: 0 0 20px 0;
+}
+.password_icon {
+    position: absolute;
+    top: 34%;
+    left: 3%;
+}
+.confirm {
+    position: relative;
+    height: 51px;
+    background-color: #EDEDED;
+    border: 1px solid none;
+    border-radius: 6px;
+    padding: 0 0 0 26px;
+    margin: 0 0 20px 0;
+}
+.confirm_icon {
+    position: absolute;
+    top: 34%;
+    left: 3%;
+}
+.sumbit-btn {
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    margin-top: 35px;
+    background-color: #5925dc;
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+    color: #fefefe;
+}
+.check_box {
+    margin: 30px 10px 30px 0;
+}
+.remember_me {
+    display: flex;
+    align-items: center;
+}
+.remember_me span {
+    color: #777;
+    font-size: 12px;
+    padding-left: 10px;
+}
+#login {
+    left: 50px;
+}
+#register {
+    left: 450px;
+}
+label > input[type="checkbox"] {
+    display: none;
+  }
+  label > input[type="checkbox"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 1rem;
+    height: 1rem;
+    margin-right: 0.3rem;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: gray;
+    flex-shrink: 0;
+  }
+ 
+  label > input[type="checkbox"]:checked + *::before {
+    content: "✓";
+    color: black;
+    text-align: center;
+    background: white;
+    border-color: #5925dc;
+  }
+  
+  /* basic layout */
+  fieldset {
+    margin: 20px;
+    max-width: 400px;
+  }
+  label > input[type="checkbox"] + * {
+    display: inline-flex;
+    padding: 0.5rem 1rem;
+  }
